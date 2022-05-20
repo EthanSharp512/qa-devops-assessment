@@ -1,15 +1,15 @@
-const {shuffleArray} = require('./utils')
+// const {shuffleArray} = require('./utils')
 
-describe('shuffleArray should', () => {
+// describe('shuffleArray should', () => {
     
-    test("return an array", () => {
-        let arr = shuffleArray()
-        expect(arr).toEqual(['array']);
-      })
+//     test("return an array", () => {
+//         let arr = shuffleArray()
+//         expect(arr).toEqual(['array']);
+//       })
 
-      test("array is of 4 elements", () => {
-        let arr = shuffleArray();
-        let arrIn = shuffleArray;
-        expect(arr.length).toEqual(arrIn.length);
-      })
-})
+//       test("array is of 4 elements", () => {
+//         let arr = shuffleArray();
+//         let arrIn = shuffleArray;
+//         expect(arr.length).toEqual(arrIn.length);
+//       })
+// })
