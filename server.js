@@ -5,15 +5,7 @@ const {bots, playerRecord} = require('./data')
 const {shuffleArray} = require('./utils')
 
 app.use(express.json())
-app.use(express.json());
-app.use(express.static(path.join(__dirname, "/public")))
-
-var Rollbar = require('rollbar')
-var rollbar = new Rollbar({
-  accessToken: '63e5e85605f84ab7a9ced54bbc401567',
-  captureUncaught: true,
-  captureUnhandledRejections: true,
-})
+app.use(express.static(path.join(__dirname, "./public")))
 
 
 app.get('/api/robots', (req, res) => {
