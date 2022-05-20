@@ -1,11 +1,10 @@
 
-import { Builder, Capabilities, By } from "selenium-webdriver"
+const {Builder, Capabilities, By} = require("selenium-webdriver")
 
 require('chromedriver')
 
 const driver = new Builder().withCapabilities(Capabilities.chrome()).build()
 
-const {drawFive, chooseBot} = require('/public/index.js');
 
 beforeEach(async () => {
     driver.get('http://localhost:3000/')
@@ -20,6 +19,17 @@ test('Title shows up when page loads', async () => {
     const displayed = await title.isDisplayed()
     expect(displayed).toBe(true)
 })
+
+// test("draw button should disiplay robots to select", async () => {
+//     await driver.findElement(By.id('draw')).click()
+
+//     await driver.sleep(3000)
+
+//     const botCard = await driver.findElement(By.xpath('(//div/div[contains(@class, "bot-card")])[1]'))
+
+//     const displayed = botCard.isDisplayed()
+//     expect(displayed).toBeTruthy()
+// })
 
 // test('clicking draw displays choices', async () => {
 //     await drawFive(driver)

@@ -5,6 +5,7 @@ const {bots, playerRecord} = require('./data')
 const {shuffleArray} = require('./utils')
 
 app.use(express.json())
+
 app.use(express.static(path.join(__dirname, "./public")))
 
 var Rollbar = require('rollbar')
