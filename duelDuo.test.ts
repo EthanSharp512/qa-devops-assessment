@@ -20,30 +20,26 @@ test('Title shows up when page loads', async () => {
     expect(displayed).toBe(true)
 })
 
-// test("draw button should disiplay robots to select", async () => {
-//     await driver.findElement(By.id('draw')).click()
+test("draw button should disiplay robots to select", async () => {
+    await driver.findElement(By.id('draw')).click()
 
-//     await driver.sleep(3000)
+    await driver.sleep(3000)
 
-//     const botCard = await driver.findElement(By.xpath('(//div/div[contains(@class, "bot-card")])[1]'))
+    const botCard = await driver.findElement(By.xpath('(//div/div[contains(@class, "bot-card")])[1]'))
 
-//     const displayed = botCard.isDisplayed()
-//     expect(displayed).toBeTruthy()
-// })
+    const displayed = botCard.isDisplayed()
+    expect(displayed).toBeTruthy()
+})
 
-// test('clicking draw displays choices', async () => {
-//     await drawFive(driver)
-//     const choices = await driver.findElement(By.id('choices'))
-//     const displayed = await choices.isDisplayed()
-//     await driver.sleep(3000)
-//     expect(displayed).toBe(true)
+test('clicking add to duo displays your duo header', async () => {
+    await driver.findElement(By.id('draw')).click()
+    await driver.findElement(By.xpath('(//div/div/button)')).click()
+
+    await driver.sleep(3000)
+
+    const yourDuo = await driver.findElement(By.id('your-duo-header'))
     
-// })
+    const displayed = await yourDuo.isDisplayed()
 
-// test('added robot to duo', async () => {
-//     await chooseBot(driver)
-//     const duo = await driver.findElement(By.id('player-duo'))
-//     const displayed = await duo.isDisplayed()
-//     await driver.sleep(3000)
-//     expect(displayed).toBe(true)
-// })
+    expect(displayed).toBeTruthy()
+})
