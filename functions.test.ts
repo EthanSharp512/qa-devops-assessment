@@ -11,4 +11,10 @@ describe('shuffleArray should', () => {
 
         expect(shuffledLength).toEqual(originalLength)
       })
+
+    test('return an array of the same length', () => {
+      const expected = ['Hello', 'Bruh'];
+
+      expect(['Hello', 'Bruh', 'Epic', 'Chungus']).toEqual(expect.arrayContaining(expected));
+    })
 })
